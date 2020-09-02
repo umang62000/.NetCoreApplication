@@ -1,0 +1,67 @@
+﻿@*
+    For more information on enabling MVC for empty projects, visit https://go.microsoft.com/fwlink/?LinkID=397860
+*@
+@{
+    ViewData["Title"] = "Index";
+}
+<div ng-controller="medicinecontroller">
+    @*<div>
+            <div>
+                <div>
+                    <table cellpadding="5" cellspacing="6" width="100%" style="background-color:whitesmoke; border:solid 4px green;">
+                        <tr>
+                            <td style="border: solid 1px gray; width:170px; text-align:center;"><a href="ShowStudents"> Show All Students </a></td>
+                            <td style="border: solid 1px gray; width:170px; text-align:center;"><a href="addstudent"> Add New Student </a></td>
+                            <td></td>
+                        </tr>
+                    </table>
+                </div>
+                <div>
+                    <div data-ng-view></div>
+                </div>
+            </div>
+        </div>*@
+    <table><tr><td height="10px"></td></tr></table>
+    <table cellpadding="4" cellspacing="4" width="90%" align="center"
+           style="background-color: skyblue; border:solid 2px red; padding-top:20px;">
+        <thead>
+            <tr style="background-color:#F5F5F5;">
+                <th>Name</th>
+                <th>Brand</th>
+                <th>Price</th>
+                <th>Quantity</th>
+                <th>ExpiryDate Year</th>
+                <th>Notes</th>
+
+            </tr>
+        </thead>
+        <tbody>
+            <tr data-ng-repeat="Med in Medicines">
+                <td>{{Med.Name}}</td>
+                <td>{{Med.Brand}}</td>
+                <td>{{Med.Price}}</td>
+                <td>{{Med.Quantity}}</td>
+                <td>{{Med.ExpiryDate}}</td>
+                <td>{{Med.Notes}}</td>
+            </tr>
+        </tbody>
+    </table>
+
+</div>
+
+@*<script type="text/javascript">
+    var app = angular.module('app', []);
+
+    // parse the gridData array to find the object with testId
+    //function remove(array, property, value) {
+    //    $.each(array, function (index, result) {
+    //        if (result[property] == value) {
+    //            array.splice(index, 1);
+    //            break;
+    //        }
+    //    });
+    //};
+
+</script>*@
+<script src="~/angular/factory/medicinefactory.js"></script>
+<script src="~/angular/controller/medicinecontroller.js"></script>
