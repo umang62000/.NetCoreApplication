@@ -1,13 +1,13 @@
 ﻿(function () {
     'use strict';
-
+    let controllerId = 'medicinecontroller';
     angular
         .module('app')
-        .controller('medicinecontroller', ['$scope', '$location', 'medicinefactory', medicinecontroller]);
+        .controller(controllerId, ['$scope','medicinefactory', medicinecontroller]);
 
     //studentcontroller.$inject = ['$location'];
 
-    function medicinecontroller($scope, $location, medicinefactory) {
+    function medicinecontroller($scope, medicinefactory) {
             var vm = this;
         vm.title = 'medicinecontroller';
         loadAllStudentsRecords();

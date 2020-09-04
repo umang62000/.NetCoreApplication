@@ -7,7 +7,7 @@ using System.Threading.Tasks;
 
 namespace CoreWebApplication.Data
 {
-    public class CoreDBContext
+    public class CoreDBContext:DbContext
     {
         public CoreDBContext() : base("conn")
         {
@@ -15,7 +15,7 @@ namespace CoreWebApplication.Data
         protected override void OnModelCreating(DbModelBuilder modelBuilder)
         {
             base.OnModelCreating(modelBuilder);
-            modelBuilder.Entity<Medicine>().ToTable("Medicine");
+            modelBuilder.Entity<Medicine>().ToTable("medicine");
         }
         public DbSet<Medicine> Medicine { get; set; }
     }

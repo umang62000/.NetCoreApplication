@@ -23,7 +23,7 @@ namespace CoreWebApplication.Controllers
 
             CoreDBContext context = new CoreDBContext();
 
-           var MedicinesData = context.Medicines.List();
+           var MedicinesData = context.Medicine;
             return Ok(MedicinesData);
         }
     }

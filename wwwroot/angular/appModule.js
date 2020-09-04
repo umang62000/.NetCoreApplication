@@ -1,13 +1,14 @@
-﻿(function () {
-    'use strict';
+﻿//(function () {
+//    'use strict';
 
-    angular.module('appModule', [
-        // Angular modules 
-        'ngRoute'
+//    angular.module('appModule', [
+//        // Angular modules 
+//        'ngRoute'
 
-        // Custom modules 
+//        // Custom modules 
 
-        // 3rd Party Modules
+//        // 3rd Party Modules
 
-    ]);
-})();
+//    ]);
+//})();
+var app = angular.module('app', ['ngRoute']);
